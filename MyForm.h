@@ -95,9 +95,9 @@ namespace Welcome {
 				static_cast<System::Byte>(0)));
 			this->lbWelcome->Location = System::Drawing::Point(40, 147);
 			this->lbWelcome->Name = L"lbWelcome";
-			this->lbWelcome->Size = System::Drawing::Size(59, 22);
+			this->lbWelcome->Size = System::Drawing::Size(0, 22);
 			this->lbWelcome->TabIndex = 3;
-			this->lbWelcome->Text = L"label2";
+			this->lbWelcome->Click += gcnew System::EventHandler(this, &MyForm::lbWelcome_Click);
 			// 
 			// tbName
 			// 
@@ -136,5 +136,6 @@ private: System::Void btnsubmit_Click(System::Object^ sender, System::EventArgs^
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	this->lbWelcome->Text = "";
 }
+
 };
 }
